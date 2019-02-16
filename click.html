@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+
+	<head>
+	
+		<title> Click Counter </title>
+
+	</head>
+
+	<body>
+
+	<center>
+	
+		<img id="image" height="150" width="150" src="1.jpg">
+		</br>
+		<button id="click" OnClick="javascript:Click()" >
+		Click Me 
+		</button>
+	
+		<h1 id="counter"  > Counter:0 </h1>
+	
+		<button id="reset" OnClick="javascript:reset(0)" >
+		Reset 
+		</button>
+	
+	
+		
+	</center>
+
+</body>
+
+<footer>
+
+
+	<script type="text/javascript">
+	
+	
+	var count = 1;
+	
+	function Click(){
+	
+		
+		for(i=1;i<=91 ;i=i+10){
+		if( count == i ){
+		document.getElementById("image").src = i + ".jpg";
+		}
+		}
+		
+		document.getElementById("counter").innerHTML = "Counter:"+count;
+		if(count > 100){
+		reset(0);
+		}
+		else
+		count = count + 1;
+	}
+	
+	
+	function reset(id){
+	document.getElementById("counter").innerHTML = "Counter:"+id;
+	document.getElementById("image").src ="1.jpg";
+	count = 1;
+	}
+	
+	
+	
+	</script>
+
+	
+	
+	
+
+</footer>
+
+
+
+
+</html>

@@ -1,0 +1,164 @@
+<!-- Created By Shayan Shaikh -->
+
+<!DOCTYPE html> 
+<html>
+
+	<head>
+	
+		<title> Click counter </title>
+		<style>
+		body{
+		
+		background : url(1.jpg);
+		background-attachment : fixed;
+		background-size : cover;
+		
+		
+		}
+		
+		h1 { 
+		background : white ;
+		font-size : 100 px;
+		padding : 10 px;
+		margin : 10 px ;
+		
+		text-shadow: 3px 3px 3px gray;
+		
+		}
+		
+		
+		
+		button {
+		
+		padding : 300 px;
+		margin : 300 px;
+	
+	width: 355px;
+	height: 85px;
+	background: #cde;
+	border: 2px solid #ccc;
+	border-color: #8ba2c1 #5890bf #4f93ca #768fa5;
+	font: 700 26px/1 Lucida Sans, Verdana, sans-serif;
+	color: #fff;
+	text-shadow: rgba(10, 10, 10, 0.5) 1px 2px 2px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	border-radius: 46px; -moz-border-radius: 46px; -webkit-border-radius: 46px;
+	box-shadow: 0 10px 16px rgba(66, 140, 240, 0.5), inset 0 -8px 12px 0 #6bf, inset 0 -8px 0 8px #48c, inset 0 -35px 15px -10px #7ad;
+	-moz-box-shadow: 0 10px 16px rgba(66, 140, 240, 0.5), inset 0 -8px 12px 0 #6bf, inset 0 -8px 0 8px #48c, inset 0 -35px 15px -10px #7ad;
+	-webkit-box-shadow: 0 10px 16px rgba(66, 140, 240, 0.5), inset 0 -8px 12px 0 #6bf, inset 0 -8px 0 8px #48c, inset 0 -35px 15px -10px #7ad;
+}
+
+button : hover {
+text-shadow: rgb(255, 255, 255) 0px 0px 5px;
+}
+		#counter{
+		 
+		 background-color:white;
+		
+		}
+		
+		body
+		{
+		background-position : center top ;
+		background-image : url ( 1.jpg );
+		}
+		
+		</style>
+	</head>
+
+	<body id="backGround" >
+	
+		<center>
+	
+	
+	
+		<h1 id="counter" bgColor="white" > Counter: 0 </h1>
+	
+		<br><br><br>
+	
+		<marquee id="myMarquee" behavior="alternate" height=" 350 " width=" 1000 " scrollamount="20"  >
+		<button id="catch" onmouseover="myMarquee.stop();" 
+		onmouseout="myMarquee.start();" OnClick="javascript:myFun()" >
+		Click me!
+		</button>
+		</marquee>
+		
+		<br>
+		<br>
+	
+		<button id="reset" OnClick="javascript:reset(0)" >
+		Reset 
+		</button>
+		</center>
+	
+	
+	</body>
+	
+	
+	<footer>
+	
+	
+	<script type="text/javascript" language="javascript" >
+	
+	
+	var count = 1;
+	function myFun(){
+	
+	    
+		if( count == 11 ){
+		document.body.style.backgroundImage = "url('11.jpg')";
+		document.all.myMarquee.direction="up";
+		}
+		if( count == 21 ){
+		document.body.style.backgroundImage = "url('21.jpg')";
+		document.all.myMarquee.direction="down";
+		}
+		if( count == 31 ){
+		document.body.style.backgroundImage = "url('31.jpg')";
+		document.all.myMarquee.direction="left";
+		}
+		if( count == 41 ){
+		document.body.style.backgroundImage = "url('41.jpg')";
+		document.all.myMarquee.direction="right";
+		}
+		
+	
+		
+		document.getElementById("counter").innerHTML = "Counter:"+count;
+		if(count > 50){
+		reset(0);
+		}
+		else
+		count = count + 1;
+	}
+	
+	
+	function reset(id){
+	
+	
+	document.body.style.backgroundImage = "url('1.jpg')";
+	document.getElementById("counter").innerHTML = "Counter:"+id;
+	count = 1;
+	}
+
+	
+	</script>
+	</footer>
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</html>
